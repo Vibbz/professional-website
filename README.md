@@ -31,18 +31,22 @@ The top of styles.css defines the main colors in :root. Mobile layout rules are 
 
 ## Plain CV pages
 
-The CV displays two high-resolution page images, with no viewer toolbar or thumbnails. Screen readers receive extracted document text. The download button points to assets/cv.pdf.
+The CV displays three high-resolution page images, with no viewer toolbar or thumbnails. Screen readers receive extracted document text. The download button points to assets/cv.pdf.
 
-When updating your CV, replace assets/cv.pdf and regenerate the two page images with Poppler:
+When updating your CV, replace assets/cv.pdf and regenerate the page images with Poppler:
 
 ```text
 pdftoppm -png -r 180 assets/cv.pdf assets/cv-page
 ```
 
-This command produces cv-page-1.png and cv-page-2.png. If the page count changes, update the page blocks in cv.html. Update the hidden text in each block for screen readers as well. Ordinary website text edits still require no build step.
+This command produces cv-page-1.png, cv-page-2.png, and cv-page-3.png. If the page count changes, update the page blocks in cv.html. Update the hidden text in each block for screen readers as well. Ordinary website text edits still require no build step.
 
 ## Publish on GitHub Pages
 
 Upload this folder's contents to a repository, with index.html at its root. Configure GitHub Pages to publish the branch's root folder. Relative links allow the site to work under a repository URL. The .nojekyll file is included.
 
 Content was copied from https://sites.google.com/view/ephil on October 6, 2026. Your original website has not been changed.
+
+## Homepage photos
+
+The three original homepage photos are in assets/category-theory-talk.jpg, assets/conference-photo.jpg, and assets/mathematics-event.jpg. Their image tags are in the commented HOMEPAGE PHOTOS section at the end of index.html. Images display fully without cropping.
