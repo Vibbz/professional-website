@@ -13,7 +13,7 @@ Plain HTML and CSS. No installation or build step is required. Open `index.html`
 | Replace the CV | assets/cv.pdf |
 | Replace the portrait | assets/portrait.jpg |
 
-The HTML is indented and contains comments identifying editable areas. The sidebar appears in each page: update all three if you change contact details or navigation. The stylesheet is shared, so design changes apply to every page.
+The HTML is indented and contains comments identifying editable areas. The sidebar appears in each page: update all four if you change contact details or navigation. The stylesheet is shared, so design changes apply to every page.
 
 ### Edit text or links
 
@@ -50,3 +50,11 @@ Content was copied from https://sites.google.com/view/ephil on October 6, 2026. 
 ## Homepage photos
 
 The three original homepage photos are in assets/category-theory-talk.jpg, assets/conference-photo.jpg, and assets/mathematics-event.jpg. Their image tags are in the commented HOMEPAGE PHOTOS section at the end of index.html. Images display fully without cropping.
+
+## AI Risk Essay
+
+`ai-risk-essay.html` preserves all 21 pages and their exact visual formatting. The original PDF is `assets/ai-risk-essay.pdf`. Each page combines its visual rendering with selectable HTML text and real HTML links. All web links, citations, and footnotes from the PDF work on the page. Internal references jump to their original destination within the essay. Hover or focus highlights a link.
+
+The PDF download remains available. Each page's text and links are grouped in a commented page section in the HTML. Image and link coordinates scale together on smaller screens. Because the PDF layout is preserved, it does not reflow like an ordinary article.
+
+If replacing the essay, regenerate both the page images and the HTML text/link positions from the new PDF. Replacing only the image files would leave link targets misaligned. Routine sidebar and heading edits still require no build step.

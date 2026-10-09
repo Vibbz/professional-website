@@ -498,3 +498,27 @@ footer {
 
 
 
+
+/* Align the sidebar name with the center of the profile photo. */
+@media (min-width: 651px) {
+  .sidebar .brand {
+    width: 160px;
+    text-align: center;
+  }
+}
+
+/* AI Risk Essay preserves the PDF's original page layout. */
+.essay-pages { max-width: 900px; }
+.essay-page { margin: 0 0 24px; background: white; }
+.essay-page img { display: block; width: 100%; height: auto; }
+
+/* PDF-style essay text and working links. Percentage positions scale with each page. */
+.essay-page { position: relative; container-type: inline-size; }
+.essay-text-layer { position: absolute; inset: 0; color: transparent; }
+.essay-text-layer span { position: absolute; white-space: pre; line-height: 1; user-select: text; }
+.essay-text-layer span::selection { color: transparent; background: rgba(49, 94, 154, .25); }
+.essay-links { position: absolute; inset: 0; pointer-events: none; }
+.essay-link { position: absolute; display: block; pointer-events: auto; border-radius: 1px; }
+.essay-link:hover { background: rgba(49, 94, 154, .12); }
+.essay-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; background: rgba(49, 94, 154, .15); }
+.essay-destination { position: absolute; left: 0; width: 1px; height: 1px; scroll-margin-top: 24px; }
